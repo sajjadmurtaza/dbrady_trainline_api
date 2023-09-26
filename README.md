@@ -55,7 +55,63 @@ dbrady_trainline_api a Ruby on Rails application that interacts with the Trainli
 
  *  ```rails s ```
 
+ Then open Postman or any API Testing Tool to connect with server
+
+* Enter url with GET request ```http://localhost:3000/api/v1/travel/find_trip_options_by_hardcoded_json```
+
+then you will get the result like below ...
+
+```
+ [
+	{
+		"departure_station": "London St-Pancras",
+		"departure_at": "2023-12-21T06:01:00.000+00:00",
+		"arrival_station": "Paris Gare du Nord",
+		"arrival_at": "2023-12-21T09:20:00.000+01:00",
+		"service_agencies": "Eurostar",
+		"duration_in_minutes": 139,
+		"changeovers": 12,
+		"products": [
+			"train"
+		],
+		"fares": [
+			{
+				"name": "Standard",
+				"price_in_cents": 10759.0,
+				"currency": "USD",
+				"comfort_class": "Standard"
+			}
+		]
+	},
+	{
+		"departure_station": "London St-Pancras",
+		"departure_at": "2023-12-21T07:01:00.000+00:00",
+		"arrival_station": "Paris Gare du Nord",
+		"arrival_at": "2023-12-21T10:18:00.000+01:00",
+		"service_agencies": "Eurostar",
+		"duration_in_minutes": 137,
+		"changeovers": 12,
+		"products": [
+			"train"
+		],
+		"fares": [
+			{
+				"name": "Standard",
+				"price_in_cents": 14010.0,
+				"currency": "USD",
+				"comfort_class": "Standard"
+			}
+		]
+	}
+    .....
+ ```
+
+ ![alt text](https://raw.githubusercontent.com/sajjadmurtaza/SchedulyBridge/master/app/assets/images/result.png "result Screenshot")
+
+
  
+ You can also use ```http://localhost:3000/api/v1/travel/find_trip_options``` for real request, if you know the correct endpoint.
+
  ***
 
 
