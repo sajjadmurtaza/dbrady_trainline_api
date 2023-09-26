@@ -1,0 +1,31 @@
+# .rubocop.yml
+
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'db/migrate/**/*'
+    - 'bin/*'
+    - 'config/**/*'
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'app/controllers/api/v1/travel_controller.rb'
+    - 'app/mailers/application_mailer.rb'
+    - 'app/models/application_record.rb'
+    - 'test/test_helper.rb'
+
+
+Metrics/MethodLength:
+  Exclude:
+    - 'app/services/trainline_data_parser.rb'
+
+Metrics/AbcSize:
+  Exclude:
+    - 'app/services/trainline_data_parser.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'app/services/trainline_data_parser.rb'
+    - 'spec/controllers/api/v1/travel_controller_spec.rb'
+    - 'spec/services/trainline_data_parser_spec.rb'
